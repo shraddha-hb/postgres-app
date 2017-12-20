@@ -1,0 +1,11 @@
+<div class="col-md-12">
+  <div class="jumbotron">
+  	<h1>Harbinger Group</h1>
+  	<% if user_signed_in? %>
+      <p>Welcome!</p>
+    <% else %>
+	    <p>Let's Connect with us!</p>
+			<p><%= link_to "Create Account", new_user_registration_path, class: 'btn btn-primary btn-lg' %></p>
+    <% end %>
+  </div>
+</div>
