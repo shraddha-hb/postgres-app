@@ -1,5 +1,6 @@
 Rails.application.routes.draw do 
 
+  resources :payment_notifications
   # current_cart 'cart', :controller => 'carts', :action => 'show', :id => 'current'
   
   get '/carts', to: 'carts#show', as: 'current_cart'

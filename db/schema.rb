@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171219095132) do
+ActiveRecord::Schema.define(version: 20171221091424) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,15 @@ ActiveRecord::Schema.define(version: 20171219095132) do
     t.integer "product_id"
     t.integer "cart_id"
     t.integer "quantity"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "payment_notifications", force: :cascade do |t|
+    t.text "params"
+    t.integer "cart_id"
+    t.string "status"
+    t.string "transaction_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
