@@ -43,20 +43,5 @@ https://developers.facebook.com/apps/1484591001637446/fb-login/
 # //= require_tree . */
 
 rails generate scaffold product name 'price:decimal{7,2}'
-
-o   Gems:
-§  CarrierWave, Kaminari, HAML, Shoulda, factory_girl, RMagick, Cancan, Nokogiri, Passenger, Formtastic, Omniauth, resque, capybara, Active Merchant, Jammit, Bundler,  SASS, event machine, mustache, Phusion Passenger, Unicorn, Chef
-
-
-Unit Testing
-Rspec: Factory girl,
-Controller Rspecs, Ruby Classes Rspecs
-Stub
-Code coverage for rspec
-Brkman
-
-Ruby Core
-Class hierarchy
-Array operations
-Hash operations
-Lambda functions
+https://www.lexiconn.com/blog/2017/03/paypal-certificate-expiring-what-you-need-to-do/
+https://askubuntu.com/questions/849253/how-to-get-username-and-password-for-recently-installed-jenkins

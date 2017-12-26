@@ -22,8 +22,12 @@
         <td><%= product.description %></td>
         <td><%= product.category.name %></td>
         <td><%= link_to 'Show', product %></td>
-        <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if can? :update, @product %>
+          <td><%= link_to 'Edit', edit_product_path(product) %></td>
+        <% end %>
+        <% if can? :destroy, @product %>
+          <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
         <td class="actions">
           <%= link_to "Add to Cart", create_current_cart_path(:product_id => product), :method => :post %>
         </td>

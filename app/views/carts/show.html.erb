@@ -25,7 +25,6 @@
 <p><%= link_to "Continue Shopping", products_url %></p>
 
 <%= form_tag APP_CONFIG[:paypal_url] do %>
-<% binding.pry %>
   <%= hidden_field_tag :cmd, "_s-xclick" %>
   <%= hidden_field_tag :encrypted, @cart.paypal_encrypted(products_url, payment_notifications_url(:secret => APP_CONFIG[:paypal_secret])) %>
   <p><%= submit_tag "Checkout" %></p>
