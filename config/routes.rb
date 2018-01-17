@@ -24,7 +24,7 @@ Rails.application.routes.draw do
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'welcome#index'
-  resources :users, only: [:index, :show]
+  resources :users, only: [:index, :show,:update]
   # match 'current_cart', :to => "carts#show", :via => :all 
   
   # resources :products

@@ -45,3 +45,4 @@ https://developers.facebook.com/apps/1484591001637446/fb-login/
 rails generate scaffold product name 'price:decimal{7,2}'
 https://www.lexiconn.com/blog/2017/03/paypal-certificate-expiring-what-you-need-to-do/
 https://askubuntu.com/questions/849253/how-to-get-username-and-password-for-recently-installed-jenkins
+http://www.eq8.eu/blogs/6-jenkins-ci-for-rails-4-rspec-cucumber-selenium

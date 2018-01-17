@@ -10,7 +10,7 @@
       </ul>
     </div>
   <% end %>
-
+  <!-- < %= render 'shared/errors', object: post %> -->
   <div class="field">
     <%= form.label :category_id %><br />
     <%= form.collection_select :category_id, Category.all, :id, :name %>
@@ -28,6 +28,29 @@
   <div class="field">
     <%= form.label :description %>
     <%= form.text_field :description, id: :product_description %>
+  </div>
+
+  <div>
+    <%= form.label :image %>
+    <%= form.file_field :image %><br>
+    <%= form.text_field :remote_image_url %>
+    <small>Enter URL to an image</small>
+    <%= form.hidden_field :image_cache %>
+  </div>
+
+  <% if product.image? %>
+    <%= image_tag product.image.thumb.url %>
+    <div>
+      <%= label_tag :remove_image do %>
+        Remove image
+        <%= form.check_box :remove_image %>
+      <% end %>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :attachments %>
+    <%= form.file_field :attachments, multiple: true %>
   </div>
 
   <div class="actions">

@@ -4,7 +4,9 @@
   <strong>Name:</strong>
   <%= @product.name %>
 </p>
-
+<p>
+  <%= link_to(image_tag(@product.image.thumb.url, alt: 'Image'), @product.image.url, target: '_blank') if @product.image? %>
+</p>
 <p>
   <strong>Price:</strong>
   <%= @product.price %>
@@ -20,6 +22,16 @@
 	  <strong>Category:</strong>
 	  <%= link_to h(@product.category.name), @product.category %>
 	</p>
+<% end %>
+
+<% if @product.attachments? %>
+  <p>
+    <ul>
+      <% @product.attachments.each do |attachment| %>
+        <li><%= link_to(image_tag(attachment.thumb.url, alt: 'Image'), attachment.url, target: '_blank') %></li>
+      <% end %>
+    </ul>
+  </p>
 <% end %>
 
 <% if can? :update, @product %>

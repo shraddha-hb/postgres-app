@@ -78,3 +78,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'mocha', group: :test
+gem 'carrierwave', '~> 1.0'
+gem 'rmagick', :require => 'RMagick'
+gem 'file_validators'

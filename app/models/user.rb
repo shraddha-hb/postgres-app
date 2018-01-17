@@ -26,6 +26,7 @@ class User < ApplicationRecord
   def full_name
     name.blank? ? email : name
   end
+  
   def admin?
     has_role?(:admin)
   end
