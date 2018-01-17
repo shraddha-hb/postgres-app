@@ -81,3 +81,4 @@ gem 'mocha', group: :test
 gem 'carrierwave', '~> 1.0'
 gem 'rmagick', :require => 'RMagick'
 gem 'file_validators'
+gem 'ci_reporter'
